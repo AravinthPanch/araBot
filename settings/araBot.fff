@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="araBot" version="2018-01-01 13:26:08" app="S3D-Software 4.0.0">
+<profile name="araBot" version="2018-01-26 09:51:47" app="S3D-Software 4.0.0">
   <baseProfile>Default</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -22,8 +22,8 @@
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2752</layerHeight>
-  <topSolidLayers>2</topSolidLayers>
-  <bottomSolidLayers>2</bottomSolidLayers>
+  <topSolidLayers>3</topSolidLayers>
+  <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>2</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>2</startPointOption>
@@ -62,8 +62,8 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Rectilinear</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>20</infillPercentage>
-  <outlineOverlapPercentage>10</outlineOverlapPercentage>
+  <infillPercentage>40</infillPercentage>
+  <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>125</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
@@ -72,16 +72,16 @@
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>0</generateSupport>
   <supportExtruder>0</supportExtruder>
-  <supportInfillPercentage>30</supportInfillPercentage>
+  <supportInfillPercentage>15</supportInfillPercentage>
   <supportExtraInflation>0</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
   <denseSupportLayers>0</denseSupportLayers>
   <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
-  <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
-  <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
-  <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
+  <supportHorizontalPartOffset>1</supportHorizontalPartOffset>
+  <supportUpperSeparationLayers>2</supportUpperSeparationLayers>
+  <supportLowerSeparationLayers>2</supportLowerSeparationLayers>
   <supportType>0</supportType>
   <supportGridSpacing>4</supportGridSpacing>
   <maxOverhangAngle>45</maxOverhangAngle>
@@ -139,21 +139,21 @@
   <baudRateOverride>250000</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode></startingGcode>
+  <startingGcode>; Start Script,M502	; Reset Bed Level Settings which are used for PCB Milling</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>; End Script,G91	; Go to relative positioning,G1 E-5	; Retract filament,G1 Z5	; Lift up Z 5mm from current position,,G90	; Go to absolute positioning,G1 X0 Y0	; Go to home position of X and Y,G1 Z0	; Lower the Z,M104 S0	; Turn off temperature,M84 	; Disable all stepper motors,,;{profile_string},M117 Katham Katham	;Show on LCD</endingGcode>
+  <endingGcode>; End Script,G91	; Go to relative positioning,G1 E-5	; Retract filament,G1 Z5	; Lift up Z 5mm from current position,,G90	; Go to absolute positioning,G1 X0 Y0	; Go to home position of X and Y,M104 S0	; Turn off temperature,M84 	; Disable all stepper motors,,;{profile_string},M117 Katham Katham	;Show on LCD</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
   <postProcessing></postProcessing>
   <defaultSpeed>1500</defaultSpeed>
-  <outlineUnderspeed>0.6</outlineUnderspeed>
-  <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
-  <supportUnderspeed>0.8</supportUnderspeed>
-  <rapidXYspeed>3000</rapidXYspeed>
-  <rapidZspeed>1800</rapidZspeed>
+  <outlineUnderspeed>0.5</outlineUnderspeed>
+  <solidInfillUnderspeed>0.5</solidInfillUnderspeed>
+  <supportUnderspeed>0.5</supportUnderspeed>
+  <rapidXYspeed>2000</rapidXYspeed>
+  <rapidZspeed>1000</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
   <bridgingExtraInflation>0</bridgingExtraInflation>
   <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
@@ -236,11 +236,11 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
     <layerHeight>0.2752</layerHeight>
-    <topSolidLayers>2</topSolidLayers>
-    <bottomSolidLayers>2</bottomSolidLayers>
+    <topSolidLayers>3</topSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>20</infillPercentage>
-    <supportInfillPercentage>30</supportInfillPercentage>
+    <infillPercentage>40</infillPercentage>
+    <supportInfillPercentage>15</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
     <layerHeight>0.1</layerHeight>
