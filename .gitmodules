@@ -1,0 +1,4 @@
+[submodule "firmware/arabot-marlin"]
+	path = firmware/arabot-marlin
+	url = git@github.com:AravinthPanch/Marlin.git
+	branch = 1.1.x
